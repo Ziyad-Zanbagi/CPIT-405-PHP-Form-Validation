@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Form Validation</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        input{
+            margin: 10px;
+            padding: 6px;
+            
+        }
+        #inputComment{
+            padding: 70px 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact us</h1>
+    <form id= "myForm" action="formValidationServer.php" onsubmit="validateForm(event)" method="post">
+        <label for="fnameInput">First name:</label>
+        <input type="text" id="fnameInput" name="fname">
+        <label for="lnameInput">Last name:</label>
+        <input type="text" id="lnameInput" name="lname">
+        <label for="emailInput">Email:</label>
+        <input type="text" id="emailInput" name="email"><br>
+        <label for="Comment">Comment:</label>
+        <input type="text" id="inputComment" name="comment">
+        <input type="submit" value="send">
+    </form>
+    <div id="error-message"></p>
+    <script src="./formValidationClient.js"></script>
+</body>
+</html>
